@@ -76,8 +76,8 @@ export function getAllTask(perPage: number, page: number): Task[] {
   const array = tasks;
   const startIndex = (page - 1) * perPage
   const endIndex = startIndex + perPage
-  const paginatedItems = array.slice(startIndex, endIndex)
-  return paginatedItems
+  array.slice(startIndex, endIndex)
+  return array
 }
 
 export function filterByAssignedTo(username: string | QueryString.ParsedQs | string[] | QueryString.ParsedQs[] | undefined): Task[] | [] {
